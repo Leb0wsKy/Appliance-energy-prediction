@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Juan Pablo Basso",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 6.8,
+      "left": -42.64,
+      "rotate": 180,
+      "attrs": {}
+    },
+    { "type": "chip-pzem-004t", "id": "chip1", "top": -37.38, "left": -43.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5V", "chip1:VCC", "red", [ "h57.45", "v-48" ] ],
+    [ "esp:GND.1", "chip1:GND", "black", [ "h38.25", "v-86.4" ] ],
+    [ "esp:TX", "chip1:IN", "green", [ "h-19.2", "v67.2", "h297.6", "v-201.6", "h-9.6" ] ],
+    [ "chip1:OUT", "esp:RX", "green", [ "h21.01", "v220.8", "h-316.8", "v-86.4" ] ],
+    [ "esp:16", "chip1:TX", "green", [ "h-19.2", "v-105.6" ] ],
+    [ "chip1:RX", "esp:17", "green", [ "h-28.8", "v124.8" ] ]
+  ],
+  "dependencies": {}
+}
