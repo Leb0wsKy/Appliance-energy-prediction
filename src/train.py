@@ -11,7 +11,7 @@ def train(target_appliance="TVE"):
     X, y, scaler_X, scaler_y = preprocess_data(df, target_appliance)
     
     # Windowed data
-    Xw, yw = create_windows(X, y, seq_len=60)
+    Xw, yw = create_windows(X, y, seq_len=30)
     
     model = build_lstm_model(seq_len=30, features=1)
     model.fit(Xw, yw, epochs=10, batch_size=32, validation_split=0.2)
