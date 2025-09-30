@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>settings page</title>
+        <link rel="stylesheet" href="setting.css">
+    </head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/Nouveau dossier/home/elc.png" alt="logo" height="50" width="50">
+                <h2> Energenuis </h2>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><img src="/Nouveau dossier/photos/dashboard.svg" alt="dashboard"> Dashboard</li>
+                    <li> <img src="/Nouveau dossier/photos/device.svg" alt="Devices"> Devices</li>
+                    <li> <img src="/Nouveau dossier/photos/reports.svg" alt="Reports"> Reports</li>
+                    <li> <img src="/Nouveau dossier/photos/AICHATBOT.svg" alt="AI Chatbot">Chatbot</li>
+                    <li class="active"> <img src="/Nouveau dossier/photos/setting.svg" alt="Settings"> Settings</li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <img src="" alt="user picture">
+                <div>
+                    <p class="name">admin</p>
+                    <p class="email">admin@gmail.com</p>
+                </div>
+            </div>
+         </aside> 
+<main class="main-content">  
+  <div class="card">
+    <h2>Company Profile</h2>
+    <form class="company-form">
+      <div class="form-group">
+        <label for="company-name">Company Name</label>
+        <input type="text" id="company-name" placeholder="Enter company name">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Enter address">
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Person</label>
+        <input type="text" id="contact" placeholder="Enter contact person">
+      </div>
+      <div class="form-group">
+        <label for="billing">Billing Information</label>
+        <input type="text" id="billing" placeholder="Enter billing info">
+      </div>
+    </form>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      <h2>User Management</h2>
+      <button class="btn-add">+ Add User</button>
+    </div>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jawher Essid</td>
+          <td>jawher.essid@energenius.com</td>
+          <td><span class="role admin">Admin</span></td>
+          <td>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="remove">Remove</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Balsem Zouabi</td>
+          <td>balsem.zouabi@energenius.com</td>
+          <td><span class="role viewer">Viewer</span></td>
+          <td>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="remove">Remove</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Eslem Ben Ameur</td>
+          <td>eslem.benameur@energenius.com</td>
+          <td><span class="role viewer">Viewer</span></td>
+          <td>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="remove">Remove</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div class="card data-export">
+  <div class="export-left">
+    <h2>Data Export</h2>
+    <p>Export your energy consumption data</p>
+  </div>
+  <div class="export-right">
+    <button class="btn-export">Export Data </button>
+  </div>
+</div>
+
+</main>
+
+    </div>
+</body>
+</html>

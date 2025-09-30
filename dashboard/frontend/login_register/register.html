@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Project Registration</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .left {
+            flex: 1;
+            background: url('blll.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; 
+            text-align: left;
+            padding: 40px;
+            position: relative;
+
+        }
+        .register-form-header {
+            margin-bottom: 20px;
+            text-align: center;    
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+            }
+        .register-form-header h2 {
+            margin: 0;
+            color: #005187;
+        }
+        .register-form-header h3 {
+      margin: 5px 0 0 0;
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #777;
+    }
+        .left h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .left p {
+            font-size: 0.9em;
+            margin: 0 0 10px 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+        .register-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+        .register-form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .register-form-header a {
+            font-size: 0.9rem;
+            color: #005187;
+            text-decoration: none;
+        }
+        .register-form-header a:hover {
+            text-decoration: underline;
+        }
+        .register-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #005187; 
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .register-form button:hover {
+            background-color: #4d82bc;
+        }
+        .footer-left {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255,255,255,0.0);
+            color: white;
+            padding: 10px 20px;
+            text-align: left; 
+            font-size: 0.8em;
+        }
+        .form-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-tabs .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-tabs .tab:hover {
+    background: #f5f5f5;
+}
+
+.form-tabs .active {
+    color: #005187;        
+    border-bottom: 3px solid #005187;
+}
+.left-side {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+   .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 40px; 
+      width: auto;
+    }
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      font-style: italic;
+      color: white;
+    }
+.already-account {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.already-account a {
+  color: #005187;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.already-account a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+    <div class="logo">
+        <img src="elc.png" alt="Energenius Logo">
+        <span>Energenius</span>
+    </div>
+    
+    <div class="overlay-text">
+        <h1>Monitor, Analyze, and Optimize Your Energy Consumption</h1>
+        <p>Gain real-time insights to reduce costs and enhance sustainability</p>
+    </div>
+
+    <footer class="footer-left">© 2025 Energenius All rights reserved</footer>
+</div>
+
+        <div class="right">
+           
+
+            <form class="register-form" onsubmit="registerUser(event)">
+                <div class="register-form-header">
+                    <h2>Create an account</h2>
+                    <h3>Register to start monitoring your energy consumption</h3>
+                    
+                </div>
+                 <div class="form-tabs">
+  <a href="login.html" class="tab">Login</a>
+  <a href="register.html" class="tab active">Register</a>
+</div>
+                
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text" placeholder="Your Name" required pattern="[A-Za-z]{3,}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input id="company" type="text" placeholder="Your Company" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="you@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" type="password" placeholder="Confirm Password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}" >
+                </div>
+
+                <button type="submit">Sign Up</button>
+                <p class="already-account">
+  Already have an account? <a href="login.html">Login</a>
+</p>
+            </form>
+           
+        </div>
+    </div>
+</body>
+</html>
+<script>
+async function registerUser(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const company = document.getElementById("company").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  try {
+    const res = await fetch("http://localhost:5000/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, company, email, password })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert("Registration successful!");
+      window.location.href = "login.html";
+    } else {
+      alert(" " + data.message);
+    }
+  } catch (err) {
+    alert("Error registering user");
+  }
+}
+</script>

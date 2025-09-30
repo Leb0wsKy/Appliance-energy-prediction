@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/date-fns@2.30.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+
+<style>
+    /* Ajustement pour les charts */
+    .charts-row { display: flex; gap: 20px; margin-bottom: 20px; }
+    .charts-row .chart-card { flex: 1; }
+    .chart-card { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    #globalChart { max-height: 300px; }
+    #fridgeChart, #climatisationChart, #informatiqueChart { max-height: 200px; }
+    #barChart, #pieChart { max-height: 250px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../home/elc.png" alt="logo" height="50" width="50">
+            <h2>Energenuis</h2>
+        </div>
+        <nav class="menu">
+            <ul>
+                <a href="./dashboard.html"><li class="active"><img src="../photos/dashboard.svg" alt="dashboard"> Dashboard</li></a>
+                <a href="../device/device.html"><li><img src="../photos/device.svg" alt="Devices"> Devices</li></a>
+                <a href="../chatbot/chat.html"><li><img src="../photos/AICHATBOT.svg" alt="AI Chatbot"> Chatbot</li></a>
+                <a href=""><li><img src="../photos/setting.svg" alt="Settings"> Settings</li></a>
+            </ul>
+        </nav>
+        <div class="profile">
+            <img src="../photos/img_us.jpg" alt="user picture">
+            <div>
+                <p class="name" id="userName">admin</p>
+                <p class="email" id="userEmail">admin@gmail.com</p>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="toggle-buttons">
+                <button>Daily</button>
+                <button>Weekly</button>
+                <button>Monthly</button>
+            </div>  
+        </div>
+
+        <div class="stats-cards">
+            <div class="stat-card">
+                <p class="stat-title">Total Energy Consumption</p>
+                <h2 class="stat-value" id="totalConsumption">1,250 kWh</h2>
+                <p class="stat-change positive">↑ 10% vs last week</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Estimated Price</p>
+                <h2 class="stat-value" id="pricing">$100</h2>
+                <p class="stat-change positive">↑ 5% vs last week</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Active IoT Devices</p>
+                <h2 class="stat-value">3 / 5</h2>
+                <p class="stat-note">2 device needs attention</p>
+            </div>
+        </div>
+
+        <!-- Global Chart centré -->
+        <div class="chart-card" style="width: 60%; margin: 0 auto;margin-bottom: 40px;">
+            <h2 style="text-align:center;">Global Consumption</h2>
+            <canvas id="globalChart"></canvas>
+        </div>
+
+        <!-- 3 appareils en ligne -->
+        <div class="charts-row">
+            <div class="chart-card">
+                <h3>EBE</h3>
+                <canvas id="fridgeChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>B2E</h3>
+                <canvas id="climatisationChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>TVE</h3>
+                <canvas id="informatiqueChart"></canvas>
+            </div>
+        </div>
+        <button id="see_more">See more machines</button>
+
+        <!-- Bar et Pie chart -->
+        <div class="charts-row">
+            <div class="chart-card">
+                <h3>Current Consumption (Bar)</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Current Consumption (Pie)</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
