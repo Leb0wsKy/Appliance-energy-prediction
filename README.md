@@ -3,6 +3,25 @@
 Energenius is a cost-effective, AI-powered energy management solution designed for **SMEs and factories**.  
 It leverages an **ESP32 SmartBox**, **Non-Intrusive Load Monitoring (NILM)**, and **AI models** to transform aggregated energy data into actionable machine-level insights.  
 
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/energenius">
+    <img width="250" height="250" alt="logo" src="https://github.com/user-attachments/assets/c0891395-85fa-4ec2-9d63-4b6f564704ae" />
+
+  </a>
+
+<h3 align="center">ENERGENIUS</h3>
+
+  <p align="center">
+    A smart energy management platform with AI-driven insights and predictive maintenance.
+       <br />
+    <a href="https://github.com/github_username/energenius">View Demo</a>
+    
+  </p>
+</div>
+
 With Energenius, industries can:
 - Monitor energy consumption at both factory and machine levels.  
 - Detect inefficiencies, overloads, and potential faults early.  
